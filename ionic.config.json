@@ -1,0 +1,8 @@
+{
+  "name": "banner-mobile",
+  "app_id": "7b35a187",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
