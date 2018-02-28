@@ -8,9 +8,38 @@
 
 <ion-content padding>
   <ul>
-    <li *ngFor="let course of courses">
-      {{ course[1] }}
-      {{ course.author }}
+    <li *ngFor="let courseone of courseone">
+      {{ courseone.crn }}
+    </li>
+    <li *ngFor="let courseone of courseone">
+      {{ courseone.subject }}
+    </li>
+    <li *ngFor="let courseone of courseone">
+      {{ courseone.courseNum }}
+    </li>
+    <li *ngFor="let courseone of courseone">
+      {{ courseone.section }}
+    </li>
+    <li *ngFor="let courseone of courseone">
+      {{ courseone.title }}
+    </li>
+  </ul>
+
+  <ul>
+    <li *ngFor="let coursetwo of coursetwo">
+      {{ coursetwo.crn }}
+    </li>
+    <li *ngFor="let coursetwo of coursetwo">
+      {{ coursetwo.subject }}
+    </li>
+    <li *ngFor="let coursetwo of coursetwo">
+      {{ coursetwo.courseNum }}
+    </li>
+    <li *ngFor="let coursetwo of coursetwo">
+      {{ coursetwo.section }}
+    </li>
+    <li *ngFor="let coursetwo of coursetwo">
+      {{ coursetwo.title }}
     </li>
   </ul>
 </ion-content>

@@ -10,7 +10,7 @@ import { HttpModule } from '@angular/http';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 
-export const firebaseConfig = {
+const firebaseConfig = {
   apiKey: "AIzaSyBKV2vaPjOf-cH6xrKDTagvBBuuj0J5R_w",
   authDomain: "poly-banner-mobile.firebaseapp.com",
   databaseURL: "https://poly-banner-mobile.firebaseio.com",

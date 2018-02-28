@@ -12,11 +12,20 @@ export class HomePage {
   courses: any[];
 
   constructor(db: AngularFireDatabase) {
-    db.list('/courses').valueChanges()
-      .subscribe(courses => {
-      this.courses = courses;
-      console.log(this.courses);
+    // Subscribes to courseone database
+    db.list('/courseone').valueChanges()
+      .subscribe(courseone => {
+      this.courseone = courseone;
+      console.log(this.courseone);
     });
+
+    // Subscribes to coursetwo database
+    db.list('/coursetwo').valueChanges()
+      .subscribe(coursetwo => {
+      this.coursetwo = coursetwo;
+      console.log(this.coursetwo);
+    });
+
   }
 
 }
