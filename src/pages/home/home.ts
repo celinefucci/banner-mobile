@@ -9,7 +9,8 @@ import { AngularFireDatabase } from 'angularfire2/database';
 })
 export class HomePage {
 
-  courses: any[];
+  courseone: any[];
+  coursetwo: any[];
 
   constructor(db: AngularFireDatabase) {
     // Subscribes to courseone database
