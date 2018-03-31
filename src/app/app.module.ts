@@ -6,40 +6,53 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { PageOnePage } from '../pages/page-one/page-one';
+import { PageTwoPage } from '../pages/page-two/page-two';
+import { PageThreePage } from '../pages/page-three/page-three';
+import { PageFourPage } from '../pages/page-four/page-four';
+import { PageFivePage } from '../pages/page-five/page-five';
+import { PageSixPage } from '../pages/page-six/page-six';
+import { PageSevenPage } from '../pages/page-seven/page-seven';
+import { PageEightPage } from '../pages/page-eight/page-eight';
 import { HttpModule } from '@angular/http';
-import { AngularFireModule } from 'angularfire2';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
-
-const firebaseConfig = {
-  apiKey: "AIzaSyBKV2vaPjOf-cH6xrKDTagvBBuuj0J5R_w",
-  authDomain: "poly-banner-mobile.firebaseapp.com",
-  databaseURL: "https://poly-banner-mobile.firebaseio.com",
-  projectId: "poly-banner-mobile",
-  storageBucket: "poly-banner-mobile.appspot.com",
-  messagingSenderId: "177635682751"
-};
+import { DataProvider } from '../providers/data/data';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    PageOnePage,
+    PageTwoPage,
+    PageThreePage,
+    PageFourPage,
+    PageFivePage,
+    PageSixPage,
+    PageSevenPage,
+    PageEightPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    HttpModule,
-    AngularFireDatabaseModule,
-    AngularFireModule.initializeApp(firebaseConfig),
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    PageOnePage,
+    PageTwoPage,
+    PageThreePage,
+    PageFourPage,
+    PageFivePage,
+    PageSixPage,
+    PageSevenPage,
+    PageEightPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
+    DataProvider,
   ]
 })
 export class AppModule {}

@@ -1,15 +1,27 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>
       Banner Mobile
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <ul>
-    <li>
-      {{ courseone.twoinfo.section }}
-    </li>
-  </ul>
+<ion-content>
+
+  <ion-searchbar [(ngModel)]="searchTerm" [formControl]="searchControl" (ionInput)="onSearchInput()"></ion-searchbar>
+
+  <div *ngIf="searching" class="spinner-container">
+    <ion-spinner></ion-spinner>
+  </div>
+
+  <ion-list>
+    <ion-item *ngFor="let item of items" (click)="changePage(item)">
+      {{ item.subject }}
+    </ion-item>
+  </ion-list>
+  <button ion-button color="danger" outline>
+    <a href="https://goo.gl/forms/j6DnfWeu0Cu9hpgY2">Bug Report</a>
+  </button>
+
+
 </ion-content>
