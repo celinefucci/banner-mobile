@@ -1,3 +1,106 @@
 page-page-one {
 
+  .card-title {
+    color: #488aff;
+    font-size: 36px;
+    text-align: center;
+  }
+
+  .card-subtitle {
+    color: #488aff;
+    font-size: 18px;
+    padding-top: 5px;
+    text-align: center;
+  }
+
+  .card-smalltitle {
+    color: #488aff;
+    font-size: 14px;
+    padding-top: 5px;
+    text-align: center;
+  }
+
+  .info-icon {
+    font-size: 42px;
+    color: #488aff;
+    padding-top: 5px;
+    margin-right: 45.5%;
+    margin-left: 45.5%;
+  }
+
+  hr {
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc);
+    background-image: -moz-linear-gradient(left, #ccc, #333, #ccc);
+    background-image: -ms-linear-gradient(left, #ccc, #333, #ccc);
+    background-image: -o-linear-gradient(left, #ccc, #333, #ccc);
+  }
+
+  .prof-icon {
+    font-size: 42px;
+    color: #002C73;
+    padding-top: 10px;
+    margin-right: 46.5%;
+    margin-left: 46.5%;
+  }
+
+  .cal-icon {
+    font-size: 28px;
+    color: #002C73;
+    padding-top: 25px;
+    margin-right: 47.5%;
+    margin-left: 47.5%;
+  }
+
+  .time-icon {
+    font-size: 28px;
+    color: #002C73;
+    padding-top: 25px;
+    margin-right: 47%;
+    margin-left: 47%;
+  }
+
+  .loc-icon {
+    font-size: 28px;
+    color: #002C73;
+    padding-top: 25px;
+    margin-right: 48%;
+    margin-left: 48%;
+  }
+
+  .credits-icon {
+    font-size: 28px;
+    color: #002C73;
+    padding-top: 25px;
+    margin-right: 47%;
+    margin-left: 47%;
+  }
+
+  .card-info {
+    font-size: 18px;
+  }
+
+  .text-info {
+    text-align: center;
+  }
+
+  .avl-button {
+    margin-top: 25px;
+    margin-right: 25%;
+    margin-left: 25%;
+  }
+
+  .total-button {
+    margin-right: 29.5%;
+    margin-left: 29.5%;
+  }
+
+  .enl-button {
+    margin-right: 24%;
+    margin-left: 24%;
+  }
+
+
 }

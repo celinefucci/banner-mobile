@@ -4,6 +4,8 @@ import { FormControl } from '@angular/forms';
 import { DataProvider } from '../../providers/data/data';
 import 'rxjs/add/operator/debounceTime';
 
+import { AngularFireDatabase } from 'angularfire2/database';
+
 import { PageOnePage } from '../page-one/page-one';
 import { PageTwoPage } from '../page-two/page-two';
 import { PageThreePage } from '../page-three/page-three';
@@ -20,16 +22,25 @@ import { PageEightPage } from '../page-eight/page-eight';
 })
 export class HomePage {
 
+  courses: any;
   searchTerm: string = '';
   searchControl: FormControl;
   items: any;
   searching: any = false;
 
-  constructor(public navCtrl: NavController, public dataService: DataProvider) {
+  constructor(public navCtrl: NavController, public dataService: DataProvider, public db: AngularFireDatabase) {
+
     this.searchControl = new FormControl();
   }
 
   ionViewDidLoad() {
+
+    this.db.object('/courses').valueChanges()
+    .subscribe(courses => {
+      this.courses = courses;
+      console.log(this.courses);
+    });
+
     this.setFilteredItems();
     this.searchControl.valueChanges.debounceTime(700).subscribe(search => {
       this.searching = false;

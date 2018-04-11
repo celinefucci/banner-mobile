@@ -19,14 +19,14 @@ export class DataProvider {
   constructor(public http: Http) {
 
     this.items = [
-      {crn: '2370', subject: 'ART 110', section: '11', title: 'Principles of Two Dimensional Design', pageLink: PageOnePage},
-      {crn: '3683', subject: 'ART 110', section: '12', title: 'Principles of Two Dimensional Design', pageLink: PageTwoPage},
-      {crn: '2161', subject: 'ART 135', section: '11', title: 'Drawing', pageLink: PageThreePage},
-      {crn: '2162', subject: 'ART 140', section: '11', title: 'Painting - Technique & Style', pageLink: PageFourPage},
-      {crn: '3520', subject: 'CHI 101', section: '11', title: 'Elementary Chinese', pageLink: PageFivePage},
-      {crn: '2317', subject: 'COM 108', section: '01', title: 'Introduction to Digital Media Production', pageLink: PageSixPage},
-      {crn: '3684', subject: 'COM 108', section: '01H', title: 'Introduction to Digital Media Production', pageLink: PageSevenPage},
-      {crn: '2359', subject: 'COM 112', section: '11H', title: 'Digital Photography & Imaging', pageLink: PageEightPage}
+      {subject: 'ART 110', pageLink: PageOnePage},
+      {subject: 'ART 110', pageLink: PageTwoPage},
+      {subject: 'ART 135', pageLink: PageThreePage},
+      {subject: 'ART 140', pageLink: PageFourPage},
+      {subject: 'CHI 101', pageLink: PageFivePage},
+      {subject: 'COM 106', pageLink: PageSixPage},
+      {subject: 'COM 112', pageLink: PageSevenPage},
+      {subject: 'COM 112', pageLink: PageEightPage}
     ]
 
   }

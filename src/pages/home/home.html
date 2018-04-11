@@ -8,7 +8,7 @@
 
 <ion-content>
 
-  <ion-searchbar [(ngModel)]="searchTerm" [formControl]="searchControl" (ionInput)="onSearchInput()"></ion-searchbar>
+  <ion-searchbar [(ngModel)]="searchTerm" [formControl]="searchControl" (ionInput)="onSearchInput()" color="primary"></ion-searchbar>
 
   <div *ngIf="searching" class="spinner-container">
     <ion-spinner></ion-spinner>
@@ -22,6 +22,5 @@
   <button ion-button color="danger" outline>
     <a href="https://goo.gl/forms/j6DnfWeu0Cu9hpgY2">Bug Report</a>
   </button>
-
 
 </ion-content>

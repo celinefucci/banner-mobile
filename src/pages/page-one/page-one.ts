@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the PageOnePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { ToastController } from 'ionic-angular';
+import { AngularFireDatabase } from 'angularfire2/database';
 
 @IonicPage()
 @Component({
@@ -15,11 +10,29 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class PageOnePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  courses: any;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController, public db: AngularFireDatabase) {
+
   }
 
+  // Subscribing to the database
   ionViewDidLoad() {
-    console.log('ionViewDidLoad PageOnePage');
+    this.db.object('/courses').valueChanges()
+    .subscribe(courses => {
+      this.courses = courses;
+      console.log(this.courses);
+    });
+  }
+
+  // Course description
+  showToastWithCloseButton() {
+    const toast = this.toastCtrl.create({
+      message: 'A foundation studio course that explores a variety of hands-on techniques pertaining to image creation, manipulation, and construction. Fulfills Gen Ed: The Arts.',
+      showCloseButton: true,
+      closeButtonText: 'Close'
+    });
+    toast.present();
   }
 
 }

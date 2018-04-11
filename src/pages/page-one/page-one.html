@@ -1,18 +1,55 @@
-<!--
-  Generated template for the PageOnePage page.
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>ART 110, Section 11</ion-title>
+  <ion-navbar color="primary">
   </ion-navbar>
-
 </ion-header>
 
 
 <ion-content padding>
+
+  <div class="card-title"><strong>{{ courses?.course1?.subject }} {{ courses?.course1?.courseNum }} </strong></div>
+  <div class="card-subtitle">{{ courses?.course1?.title }}</div>
+  <div class="card-smalltitle">Section: {{ courses?.course1?.section }}</div>
+  <div class="card-smalltitle">Registration Number: {{ courses?.course1?.crn }}</div>
+  <ion-icon name="information-circle" class="info-icon" (click)="showToastWithCloseButton()"></ion-icon>
+  <hr>
+
+  <div>
+    <ion-icon name="person" class="prof-icon"></ion-icon>
+    <div class="text-info">{{ courses?.course1?.instructorLN }}</div>
+  </div>
+
+  <div>
+    <ion-icon name="calendar" class="cal-icon"></ion-icon>
+    <div class="text-info">{{ courses?.course1?.days }}</div>
+  </div>
+
+  <div>
+    <ion-icon name="time" class="time-icon"></ion-icon>
+    <div class="text-info">{{ courses?.course1?.time }}</div>
+  </div>
+
+  <div>
+    <ion-icon name="pin" class="loc-icon"></ion-icon>
+    <div class="text-info">{{ courses?.course1?.building }}, Room: {{ courses?.course1?.roomNum }}</div>
+  </div>
+
+  <div>
+    <ion-icon name="checkmark-circle" class="credits-icon"></ion-icon>
+    <div class="text-info">{{ courses?.course1?.credits }} Credits</div>
+  </div>
+
+
+  <div>
+    <button ion-button color="secondary" round class="avl-button">{{ courses?.course1?.available }} Seats Available</button>
+  </div>
+
+  <div>
+    <button ion-button color="danger" round class="total-button">{{ courses?.course1?.capacity }} Seats Total</button>
+  </div>
+
+  <div>
+    <button ion-button round class="enl-button">{{ courses?.course1?.enlisted }} Students Enlisted</button>
+  </div>
 
 </ion-content>
