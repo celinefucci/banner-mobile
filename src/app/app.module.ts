@@ -5,6 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { ScreenOrientation } from '@ionic-native/screen-orientation';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -16,6 +17,14 @@ import { PageFivePage } from '../pages/page-five/page-five';
 import { PageSixPage } from '../pages/page-six/page-six';
 import { PageSevenPage } from '../pages/page-seven/page-seven';
 import { PageEightPage } from '../pages/page-eight/page-eight';
+import { PageNinePage } from '../pages/page-nine/page-nine';
+import { PageTenPage } from '../pages/page-ten/page-ten';
+import { PageElevenPage } from '../pages/page-eleven/page-eleven';
+import { PageTwelvePage } from '../pages/page-twelve/page-twelve';
+import { PageThirteenPage } from '../pages/page-thirteen/page-thirteen';
+import { PageFourteenPage } from '../pages/page-fourteen/page-fourteen';
+import { PageFifteenPage } from '../pages/page-fifteen/page-fifteen';
+
 import { HttpModule } from '@angular/http';
 import { DataProvider } from '../providers/data/data';
 
@@ -39,7 +48,14 @@ const firebaseConfig = {
     PageFivePage,
     PageSixPage,
     PageSevenPage,
-    PageEightPage
+    PageEightPage,
+    PageNinePage,
+    PageTenPage,
+    PageElevenPage,
+    PageTwelvePage,
+    PageThirteenPage,
+    PageFourteenPage,
+    PageFifteenPage
   ],
   imports: [
     BrowserModule,
@@ -59,13 +75,21 @@ const firebaseConfig = {
     PageFivePage,
     PageSixPage,
     PageSevenPage,
-    PageEightPage
+    PageEightPage,
+    PageNinePage,
+    PageTenPage,
+    PageElevenPage,
+    PageTwelvePage,
+    PageThirteenPage,
+    PageFourteenPage,
+    PageFifteenPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     DataProvider,
+    ScreenOrientation
   ]
 })
 export class AppModule {}

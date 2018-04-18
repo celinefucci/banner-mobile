@@ -1,31 +1,36 @@
 page-page-one {
 
   .card-title {
-    color: #488aff;
+    // Poly gold
+    color: #ecaa00;
     font-size: 36px;
+    padding-top: 3px;
     text-align: center;
   }
 
   .card-subtitle {
-    color: #488aff;
-    font-size: 18px;
+    // Poly blue
+    color: #002C73;
+    font-size: 20px;
     padding-top: 5px;
     text-align: center;
   }
 
   .card-smalltitle {
-    color: #488aff;
-    font-size: 14px;
-    padding-top: 5px;
+    // Poly blue
+    color: #002C73;
+    font-size: 16px;
+    padding-top: 10px;
     text-align: center;
   }
 
   .info-icon {
     font-size: 42px;
-    color: #488aff;
-    padding-top: 5px;
-    margin-right: 45.5%;
-    margin-left: 45.5%;
+    // Poly blue
+    color: #002C73;
+    padding-top: 10px;
+    margin-right: 45.4%;
+    margin-left: 45.4%;
   }
 
   hr {
@@ -42,16 +47,24 @@ page-page-one {
     font-size: 42px;
     color: #002C73;
     padding-top: 10px;
-    margin-right: 46.5%;
-    margin-left: 46.5%;
+    margin-right: 46.2%;
+    margin-left: 46.2%;
+  }
+
+  .section-icon {
+    font-size: 28px;
+    color: #002C73;
+    padding-top: 25px;
+    margin-right: 46.6%;
+    margin-left: 46.6%;
   }
 
   .cal-icon {
     font-size: 28px;
     color: #002C73;
     padding-top: 25px;
-    margin-right: 47.5%;
-    margin-left: 47.5%;
+    margin-right: 47.2%;
+    margin-left: 47.2%;
   }
 
   .time-icon {
@@ -88,19 +101,8 @@ page-page-one {
 
   .avl-button {
     margin-top: 25px;
-    margin-right: 25%;
-    margin-left: 25%;
+    margin-right: 23.8%;
+    margin-left: 23.8%;
   }
-
-  .total-button {
-    margin-right: 29.5%;
-    margin-left: 29.5%;
-  }
-
-  .enl-button {
-    margin-right: 24%;
-    margin-left: 24%;
-  }
-
 
 }

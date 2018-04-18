@@ -1,14 +1,10 @@
 <ion-header>
-  <ion-navbar color="primary">
-    <ion-title>
-      Banner Mobile
-    </ion-title>
-  </ion-navbar>
+  <ion-toolbar color="poly-blue">
+    <ion-searchbar [(ngModel)]="searchTerm" [formControl]="searchControl" (ionInput)="onSearchInput()" color="primary"></ion-searchbar>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
-  <ion-searchbar [(ngModel)]="searchTerm" [formControl]="searchControl" (ionInput)="onSearchInput()" color="primary"></ion-searchbar>
 
   <div *ngIf="searching" class="spinner-container">
     <ion-spinner></ion-spinner>
@@ -19,8 +15,5 @@
       {{ item.subject }}
     </ion-item>
   </ion-list>
-  <button ion-button color="danger" outline>
-    <a href="https://goo.gl/forms/j6DnfWeu0Cu9hpgY2">Bug Report</a>
-  </button>
 
 </ion-content>

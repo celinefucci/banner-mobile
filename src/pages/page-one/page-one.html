@@ -1,6 +1,6 @@
 
 <ion-header>
-  <ion-navbar color="primary">
+  <ion-navbar color="poly-blue">
   </ion-navbar>
 </ion-header>
 
@@ -9,14 +9,18 @@
 
   <div class="card-title"><strong>{{ courses?.course1?.subject }} {{ courses?.course1?.courseNum }} </strong></div>
   <div class="card-subtitle">{{ courses?.course1?.title }}</div>
-  <div class="card-smalltitle">Section: {{ courses?.course1?.section }}</div>
-  <div class="card-smalltitle">Registration Number: {{ courses?.course1?.crn }}</div>
+  <div class="card-smalltitle">Registration Number — {{ courses?.course1?.crn }}</div>
   <ion-icon name="information-circle" class="info-icon" (click)="showToastWithCloseButton()"></ion-icon>
   <hr>
 
   <div>
     <ion-icon name="person" class="prof-icon"></ion-icon>
     <div class="text-info">{{ courses?.course1?.instructorLN }}</div>
+  </div>
+
+  <div>
+    <ion-icon name="easel" class="section-icon"></ion-icon>
+    <div class="text-info">{{ courses?.course1?.section }}</div>
   </div>
 
   <div>
@@ -31,7 +35,7 @@
 
   <div>
     <ion-icon name="pin" class="loc-icon"></ion-icon>
-    <div class="text-info">{{ courses?.course1?.building }}, Room: {{ courses?.course1?.roomNum }}</div>
+    <div class="text-info">{{ courses?.course1?.building }}, Room {{ courses?.course1?.roomNum }}</div>
   </div>
 
   <div>
@@ -41,15 +45,17 @@
 
 
   <div>
-    <button ion-button color="secondary" round class="avl-button">{{ courses?.course1?.available }} Seats Available</button>
+    <button ion-button color="secondary" round class="avl-button">
+      {{ courses?.course1?.available }} Seats Available
+    </button>
   </div>
 
-  <div>
+  <!-- <div>
     <button ion-button color="danger" round class="total-button">{{ courses?.course1?.capacity }} Seats Total</button>
   </div>
 
   <div>
     <button ion-button round class="enl-button">{{ courses?.course1?.enlisted }} Students Enlisted</button>
-  </div>
+  </div> -->
 
 </ion-content>
