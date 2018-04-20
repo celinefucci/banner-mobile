@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the PageThreePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { ToastController } from 'ionic-angular';
+import { AngularFireDatabase } from 'angularfire2/database';
 
 @IonicPage()
 @Component({
@@ -15,11 +10,28 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class PageThreePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  courses: any;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController, public db: AngularFireDatabase) {
+
   }
 
+  // Subscribing to the database
   ionViewDidLoad() {
-    console.log('ionViewDidLoad PageThreePage');
+    this.db.object('/courses').valueChanges()
+    .subscribe(courses => {
+      this.courses = courses;
+    });
+  }
+
+  // Course description
+  showToastWithCloseButton() {
+    const toast = this.toastCtrl.create({
+      message: 'This is a beginning course in free‑hand drawing. The student will be guided through a sequence of lessons beginning with line quality, the vocabulary of lines, and proceed through drawing materials and techniques, foreshortening and shading. Fulfills Gen Ed: The Arts.',
+      showCloseButton: true,
+      closeButtonText: 'Close'
+    });
+    toast.present();
   }
 
 }

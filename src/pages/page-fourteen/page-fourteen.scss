@@ -1,3 +1,108 @@
 page-page-fourteen {
 
+  .card-title {
+    // Poly gold
+    color: #ecaa00;
+    font-size: 36px;
+    padding-top: 3px;
+    text-align: center;
+  }
+
+  .card-subtitle {
+    // Poly blue
+    color: #002C73;
+    font-size: 20px;
+    padding-top: 5px;
+    text-align: center;
+  }
+
+  .card-smalltitle {
+    // Poly blue
+    color: #002C73;
+    font-size: 16px;
+    padding-top: 10px;
+    text-align: center;
+  }
+
+  .info-icon {
+    // Poly blue
+    color: #002C73;
+    font-size: 42px;
+    padding-top: 10px;
+    margin-right: 45.4%;
+    margin-left: 45.4%;
+  }
+
+  hr {
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc);
+    background-image: -moz-linear-gradient(left, #ccc, #333, #ccc);
+    background-image: -ms-linear-gradient(left, #ccc, #333, #ccc);
+    background-image: -o-linear-gradient(left, #ccc, #333, #ccc);
+  }
+
+  .prof-icon {
+    font-size: 42px;
+    color: #002C73;
+    padding-top: 10px;
+    margin-right: 46.2%;
+    margin-left: 46.2%;
+  }
+
+  .section-icon {
+    font-size: 28px;
+    color: #002C73;
+    padding-top: 25px;
+    margin-right: 46.6%;
+    margin-left: 46.6%;
+  }
+
+  .cal-icon {
+    font-size: 28px;
+    color: #002C73;
+    padding-top: 25px;
+    margin-right: 47.2%;
+    margin-left: 47.2%;
+  }
+
+  .time-icon {
+    font-size: 28px;
+    color: #002C73;
+    padding-top: 25px;
+    margin-right: 47%;
+    margin-left: 47%;
+  }
+
+  .loc-icon {
+    font-size: 28px;
+    color: #002C73;
+    padding-top: 25px;
+    margin-right: 48%;
+    margin-left: 48%;
+  }
+
+  .credits-icon {
+    font-size: 28px;
+    color: #002C73;
+    padding-top: 25px;
+    margin-right: 47%;
+    margin-left: 47%;
+  }
+
+  .card-info {
+    font-size: 18px;
+  }
+
+  .text-info {
+    text-align: center;
+  }
+
+  .avl-button {
+    margin-top: 25px;
+    margin-right: 20%;
+    margin-left: 20%;
+  }
+
 }

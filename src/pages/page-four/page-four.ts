@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the PageFourPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { ToastController } from 'ionic-angular';
+import { AngularFireDatabase } from 'angularfire2/database';
 
 @IonicPage()
 @Component({
@@ -15,11 +10,28 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class PageFourPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  courses: any;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController, public db: AngularFireDatabase) {
+
   }
 
+  // Subscribing to the database
   ionViewDidLoad() {
-    console.log('ionViewDidLoad PageFourPage');
+    this.db.object('/courses').valueChanges()
+    .subscribe(courses => {
+      this.courses = courses;
+    });
+  }
+
+  // Course description
+  showToastWithCloseButton() {
+    const toast = this.toastCtrl.create({
+      message: 'An investigation of visual art forms and techniques that influence and express qualities of American culture. Aspects of design, color and style will be explored through studio experience, lecture, slides, and demonstrations. Fulfills Gen Ed: The Arts.',
+      showCloseButton: true,
+      closeButtonText: 'Close'
+    });
+    toast.present();
   }
 
 }

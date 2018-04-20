@@ -21,7 +21,6 @@ export class PageOnePage {
     this.db.object('/courses').valueChanges()
     .subscribe(courses => {
       this.courses = courses;
-      console.log(this.courses);
     });
   }
 

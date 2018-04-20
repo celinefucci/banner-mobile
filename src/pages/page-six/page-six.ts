@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the PageSixPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { ToastController } from 'ionic-angular';
+import { AngularFireDatabase } from 'angularfire2/database';
 
 @IonicPage()
 @Component({
@@ -15,11 +10,28 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class PageSixPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  courses: any;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController, public db: AngularFireDatabase) {
+
   }
 
+  // Subscribing to the database
   ionViewDidLoad() {
-    console.log('ionViewDidLoad PageSixPage');
+    this.db.object('/courses').valueChanges()
+    .subscribe(courses => {
+      this.courses = courses;
+    });
+  }
+
+  // Course description
+  showToastWithCloseButton() {
+    const toast = this.toastCtrl.create({
+      message: 'Introduces students to production, design and project management environments for digital projects. Students will develop communication and design skills, with an emphasis on text-based communication and presentation of numeric data in textual and graphical modes. Restricted to students in the CID and IMGD majors.',
+      showCloseButton: true,
+      closeButtonText: 'Close'
+    });
+    toast.present();
   }
 
 }

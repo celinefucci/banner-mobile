@@ -1,9 +1,7 @@
-
 <ion-header>
   <ion-navbar color="poly-blue">
   </ion-navbar>
 </ion-header>
-
 
 <ion-content padding>
 
@@ -43,19 +41,10 @@
     <div class="text-info">{{ courses?.course1?.credits }} Credits</div>
   </div>
 
-
   <div>
     <button ion-button color="secondary" round class="avl-button">
-      {{ courses?.course1?.available }} Seats Available
+      {{ courses?.course1?.available }} of {{ courses?.course1?.capacity }} Seats Available
     </button>
   </div>
-
-  <!-- <div>
-    <button ion-button color="danger" round class="total-button">{{ courses?.course1?.capacity }} Seats Total</button>
-  </div>
-
-  <div>
-    <button ion-button round class="enl-button">{{ courses?.course1?.enlisted }} Students Enlisted</button>
-  </div> -->
 
 </ion-content>

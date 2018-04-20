@@ -1,18 +1,50 @@
-<!--
-  Generated template for the PageFivePage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>CHI 101, Section 11</ion-title>
+  <ion-navbar color="poly-blue">
   </ion-navbar>
-
 </ion-header>
 
-
 <ion-content padding>
+
+  <div class="card-title"><strong>{{ courses?.course5?.subject }} {{ courses?.course5?.courseNum }} </strong></div>
+  <div class="card-subtitle">{{ courses?.course5?.title }}</div>
+  <div class="card-smalltitle">Registration Number — {{ courses?.course5?.crn }}</div>
+  <ion-icon name="information-circle" class="info-icon" (click)="showToastWithCloseButton()"></ion-icon>
+  <hr>
+
+  <div>
+    <ion-icon name="person" class="prof-icon"></ion-icon>
+    <div class="text-info">{{ courses?.course5?.instructorLN }}</div>
+  </div>
+
+  <div>
+    <ion-icon name="easel" class="section-icon"></ion-icon>
+    <div class="text-info">{{ courses?.course5?.section }}</div>
+  </div>
+
+  <div>
+    <ion-icon name="calendar" class="cal-icon"></ion-icon>
+    <div class="text-info">{{ courses?.course5?.days }}</div>
+  </div>
+
+  <div>
+    <ion-icon name="time" class="time-icon"></ion-icon>
+    <div class="text-info">{{ courses?.course5?.time }}</div>
+  </div>
+
+  <div>
+    <ion-icon name="pin" class="loc-icon"></ion-icon>
+    <div class="text-info">{{ courses?.course5?.building }}, Room {{ courses?.course5?.roomNum }}</div>
+  </div>
+
+  <div>
+    <ion-icon name="checkmark-circle" class="credits-icon"></ion-icon>
+    <div class="text-info">{{ courses?.course5?.credits }} Credits</div>
+  </div>
+
+  <div>
+    <button ion-button color="warning" round class="avl-button">
+      {{ courses?.course5?.available }} of {{ courses?.course5?.capacity }} Seats Available
+    </button>
+  </div>
 
 </ion-content>

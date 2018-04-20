@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the PageFourteenPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { ToastController } from 'ionic-angular';
+import { AngularFireDatabase } from 'angularfire2/database';
 
 @IonicPage()
 @Component({
@@ -15,11 +10,28 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class PageFourteenPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  courses: any;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController, public db: AngularFireDatabase) {
+
   }
 
+  // Subscribing to the database
   ionViewDidLoad() {
-    console.log('ionViewDidLoad PageFourteenPage');
+    this.db.object('/courses').valueChanges()
+    .subscribe(courses => {
+      this.courses = courses;
+    });
+  }
+
+  // Course description
+  showToastWithCloseButton() {
+    const toast = this.toastCtrl.create({
+      message: 'Introduces gamification as the use of frameworks and common design tropes from the game industry in new contexts. Focuses on theory exploring behavior and design within games and gaming, as well as game thinking in non-game contexts.',
+      showCloseButton: true,
+      closeButtonText: 'Close'
+    });
+    toast.present();
   }
 
 }
