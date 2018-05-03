@@ -22,6 +22,9 @@ import { PageThirteenPage } from '../page-thirteen/page-thirteen';
 import { PageFourteenPage } from '../page-fourteen/page-fourteen';
 import { PageFifteenPage } from '../page-fifteen/page-fifteen';
 
+var Button3 = new Audio();
+Button3.src = "assets/audio/Button3.m4a";
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
